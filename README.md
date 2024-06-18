@@ -9,7 +9,7 @@ This is a short presentation to show you how to run the code using iTerm.
 Execute the following commands in iTerm.
 
 ```bash
-git clone
+git clone https://github.com/anqqaw/backend-example
 cd backend-example
 node index.js
 ```
