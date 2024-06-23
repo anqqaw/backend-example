@@ -6,6 +6,10 @@ const port = 3000;
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Go to http://localhost:${port}/api/fetch-json to get JSON data')
+})
+
 app.get('/api/fetch-json', async (req, res) => {
   try {
     const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
@@ -19,5 +23,5 @@ app.get('/api/fetch-json', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on port http://localhost:${port}/api/fetch-json`);
 });
