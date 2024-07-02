@@ -1,4 +1,5 @@
 
+
 const express = require('express');
 const axios = require('axios');
 const app = express();
@@ -7,7 +8,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Go to http://localhost:${port}/api/fetch-json to get JSON data')
+  res.send(`Go to http://localhost:${port}/api/fetch-json to get JSON data`)
 })
 
 app.get('/api/fetch-json', async (req, res) => {
