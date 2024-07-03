@@ -1,9 +1,16 @@
 
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const app = express();
-const port = 9000;
+const port = process.env.PORT || 9000;
 
+const corsOptions = {
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/', (req, res) => {
